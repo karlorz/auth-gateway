@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useEffect, useState, useRef } from 'react';
 import { Button, Col, Form, Row, Spin, Tag } from '@douyinfe/semi-ui';

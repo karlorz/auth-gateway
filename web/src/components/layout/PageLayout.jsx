@@ -1,5 +1,3 @@
-/*
-*/
 
 import HeaderBar from './headerbar';
 import { Layout } from '@douyinfe/semi-ui';

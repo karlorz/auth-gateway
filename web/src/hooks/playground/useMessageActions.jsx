@@ -1,5 +1,3 @@
-/*
-*/
 
 import { useCallback } from 'react';
 import { Toast, Modal } from '@douyinfe/semi-ui';

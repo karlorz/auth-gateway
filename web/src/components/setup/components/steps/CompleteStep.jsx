@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { Avatar, Typography, Descriptions } from '@douyinfe/semi-ui';

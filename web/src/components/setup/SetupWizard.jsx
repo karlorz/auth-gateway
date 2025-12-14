@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useEffect, useState, useRef } from 'react';
 import { Card, Divider, Steps, Form } from '@douyinfe/semi-ui';

@@ -1029,4 +1029,4 @@ export function useAuth() {
 
 ---
 
-*This documentation is generated from the New API codebase. For the latest updates, refer to the source code and official documentation at https://docs.newapi.pro/*
+*This documentation is for Auth Gateway. For the latest updates, refer to the source code at https://github.com/karlorz/auth-gateway*

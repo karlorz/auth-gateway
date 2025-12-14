@@ -1,5 +1,3 @@
-/*
-*/
 
 export const MESSAGE_STATUS = {
   LOADING: 'loading',

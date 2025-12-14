@@ -1,5 +1,3 @@
-/*
-*/
 
 import { useCallback, useRef } from 'react';
 import { MESSAGE_ROLES } from '../../constants/playground.constants';

@@ -1,5 +1,3 @@
-/*
-*/
 
 import i18next from 'i18next';
 import { Modal, Tag, Typography, Avatar } from '@douyinfe/semi-ui';

@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { Card, Spin, Button, Modal } from '@douyinfe/semi-ui';

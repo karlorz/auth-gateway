@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import {

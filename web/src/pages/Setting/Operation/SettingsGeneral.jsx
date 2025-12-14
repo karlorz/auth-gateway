@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useEffect, useState, useRef, useMemo } from 'react';
 import {
@@ -168,7 +166,7 @@ export default function GeneralSettings(props) {
                   field={'general_setting.docs_link'}
                   label={t('文档地址')}
                   initValue={''}
-                  placeholder={t('例如 https://docs.newapi.pro')}
+                  placeholder={t('例如 https://github.com/karlorz/auth-gateway')}
                   onChange={handleFieldChange('general_setting.docs_link')}
                   showClear
                 />

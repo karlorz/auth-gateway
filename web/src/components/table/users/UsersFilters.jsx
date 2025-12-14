@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useRef } from 'react';
 import { Form, Button } from '@douyinfe/semi-ui';

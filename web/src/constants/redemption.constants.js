@@ -1,5 +1,3 @@
-/*
-*/
 
 export const REDEMPTION_STATUS = {
   UNUSED: 1, // Unused

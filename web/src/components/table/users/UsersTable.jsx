@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useMemo, useState } from 'react';
 import { Empty } from '@douyinfe/semi-ui';

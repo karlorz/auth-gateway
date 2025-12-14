@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useMinimumLoadingTime } from '../../../hooks/common/useMinimumLoadingTime';

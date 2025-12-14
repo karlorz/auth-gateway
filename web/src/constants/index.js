@@ -1,5 +1,3 @@
-/*
-*/
 
 export * from './channel.constants';
 export * from './user.constants';

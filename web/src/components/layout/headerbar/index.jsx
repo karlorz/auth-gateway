@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { useHeaderBar } from '../../../hooks/common/useHeaderBar';

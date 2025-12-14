@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { Button, Dropdown } from '@douyinfe/semi-ui';

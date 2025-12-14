@@ -1,5 +1,3 @@
-/*
-*/
 
 import { useState, useEffect, useMemo, useContext, useRef } from 'react';
 import { StatusContext } from '../../context/Status';

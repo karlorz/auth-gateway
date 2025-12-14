@@ -1,5 +1,3 @@
-/*
-*/
 
 const toBinaryString = (text) => {
   if (typeof TextEncoder !== 'undefined') {

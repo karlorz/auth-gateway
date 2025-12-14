@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { Spin } from '@douyinfe/semi-ui';

@@ -1,5 +1,3 @@
-/*
-*/
 
 import { useState, useEffect, useContext, useCallback, useMemo } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';

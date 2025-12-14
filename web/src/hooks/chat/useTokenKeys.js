@@ -1,5 +1,3 @@
-/*
-*/
 
 import { useEffect, useState } from 'react';
 import { fetchTokenKeys, getServerAddress } from '../../helpers/token';

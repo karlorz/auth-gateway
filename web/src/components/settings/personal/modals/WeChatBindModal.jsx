@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { Button, Input, Modal, Image } from '@douyinfe/semi-ui';

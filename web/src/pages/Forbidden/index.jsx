@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { Empty } from '@douyinfe/semi-ui';

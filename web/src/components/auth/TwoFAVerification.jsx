@@ -1,5 +1,3 @@
-/*
-*/
 import { API, showError, showSuccess } from '../../helpers';
 import {
   Button,

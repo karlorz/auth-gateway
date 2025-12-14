@@ -1,5 +1,3 @@
-/*
-*/
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';

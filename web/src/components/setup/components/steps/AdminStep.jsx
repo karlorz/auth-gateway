@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { Banner, Form } from '@douyinfe/semi-ui';

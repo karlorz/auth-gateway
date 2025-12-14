@@ -1,5 +1,3 @@
-/*
-*/
 
 export function setStatusData(data) {
   localStorage.setItem('status', JSON.stringify(data));

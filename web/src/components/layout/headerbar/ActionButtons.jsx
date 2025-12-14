@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import NewYearButton from './NewYearButton';

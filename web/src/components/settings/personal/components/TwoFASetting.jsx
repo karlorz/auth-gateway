@@ -1,5 +1,3 @@
-/*
-*/
 import { API, showError, showSuccess, showWarning } from '../../../../helpers';
 import {
   Banner,

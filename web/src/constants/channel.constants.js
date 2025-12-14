@@ -1,5 +1,3 @@
-/*
-*/
 
 export const CHANNEL_OPTIONS = [
   { value: 1, color: 'green', label: 'OpenAI' },

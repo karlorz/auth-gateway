@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { Input, Modal, Typography } from '@douyinfe/semi-ui';

@@ -1,5 +1,3 @@
-/*
-*/
 
 import React from 'react';
 import { RadioGroup, Radio } from '@douyinfe/semi-ui';

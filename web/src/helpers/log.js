@@ -1,5 +1,3 @@
-/*
-*/
 
 export function getLogOther(otherStr) {
   if (otherStr === undefined || otherStr === '') {

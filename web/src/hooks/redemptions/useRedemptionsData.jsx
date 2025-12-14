@@ -1,5 +1,3 @@
-/*
-*/
 
 import { useState, useEffect } from 'react';
 import { API, showError, showSuccess, copy } from '../../helpers';

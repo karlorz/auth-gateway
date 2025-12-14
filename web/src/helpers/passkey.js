@@ -1,5 +1,3 @@
-/*
-*/
 export function base64UrlToBuffer(base64url) {
   if (!base64url) return new ArrayBuffer(0);
   let padding = '='.repeat((4 - (base64url.length % 4)) % 4);
