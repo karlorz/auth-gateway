@@ -21,6 +21,26 @@ const (
 	SecureVerificationTimeout = 300 // 5分钟
 )
 
+// validateTwoFactorAuth validates a 2FA code (TOTP or backup code)
+func validateTwoFactorAuth(twoFA *model.TwoFA, code string) bool {
+	if twoFA == nil || !twoFA.IsEnabled {
+		return false
+	}
+
+	// Try TOTP validation first
+	cleanCode, err := common.ValidateNumericCode(code)
+	if err == nil {
+		valid, _ := twoFA.ValidateTOTPAndUpdateUsage(cleanCode)
+		if valid {
+			return true
+		}
+	}
+
+	// Try backup code validation
+	valid, _ := twoFA.ValidateBackupCodeAndUpdateUsage(code)
+	return valid
+}
+
 type UniversalVerifyRequest struct {
 	Method string `json:"method"` // "2fa" 或 "passkey"
 	Code   string `json:"code,omitempty"`

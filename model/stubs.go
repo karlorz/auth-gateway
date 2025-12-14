@@ -5,6 +5,7 @@ package model
 
 const (
 	LogTypeSystem = 0
+	LogTypeManage = 1
 )
 
 // RecordLog is a stub - logging functionality removed
@@ -20,4 +21,21 @@ func increaseTokenQuota(tokenId int, quota int) error {
 // updateChannelUsedQuota is a stub - channel quota removed
 func updateChannelUsedQuota(channelId int, quota int) error {
 	return nil
+}
+
+// Token is a stub struct for removed API token functionality
+type Token struct {
+	Id     int
+	UserId int
+	Key    string
+}
+
+// GetGroupEnabledModels is a stub - models functionality removed
+func GetGroupEnabledModels(group string) []string {
+	return []string{}
+}
+
+// Redeem is a stub - redemption functionality removed
+func Redeem(code string, userId int) (int, error) {
+	return 0, nil
 }
