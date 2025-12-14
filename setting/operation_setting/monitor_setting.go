@@ -4,7 +4,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/karlchow/auth-gateway/setting/config"
+	"github.com/karlorz/auth-gateway/setting/config"
 )
 
 type MonitorSetting struct {

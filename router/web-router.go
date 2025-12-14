@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/controller"
-	"github.com/karlchow/auth-gateway/middleware"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/controller"
+	"github.com/karlorz/auth-gateway/middleware"
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"

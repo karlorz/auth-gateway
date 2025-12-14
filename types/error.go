@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 )
 
 type OpenAIError struct {

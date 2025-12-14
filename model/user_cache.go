@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/constant"
-	"github.com/karlchow/auth-gateway/dto"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/constant"
+	"github.com/karlorz/auth-gateway/dto"
 
 	"github.com/gin-gonic/gin"
 

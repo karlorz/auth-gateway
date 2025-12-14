@@ -1,29 +1,71 @@
 /*
-Copyright (C) 2025 QuantumNous
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
-
-For commercial licensing, please contact support@quantumnous.com
+Copyright (C) 2025 Auth Gateway
 */
 
-import React from 'react';
-import Dashboard from '../../components/dashboard';
+import React, { useContext } from 'react';
+import { Card, Typography, Avatar, Descriptions } from '@douyinfe/semi-ui';
+import { IconUser, IconShield, IconKey } from '@douyinfe/semi-icons';
+import { UserContext } from '../../context/User';
+import { Link } from 'react-router-dom';
 
-const Detail = () => (
-  <div className='mt-[60px] px-2'>
-    <Dashboard />
-  </div>
-);
+const { Title, Text } = Typography;
 
-export default Detail;
+const Dashboard = () => {
+  const [userState] = useContext(UserContext);
+  const user = userState?.user || {};
+
+  return (
+    <div className='mt-[60px] px-4 max-w-4xl mx-auto'>
+      <Title heading={2} className='mb-6'>Dashboard</Title>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        {/* User Info Card */}
+        <Card title='Profile' className='h-fit'>
+          <div className='flex items-center gap-4 mb-4'>
+            <Avatar size='large' color='blue'>
+              {user.username?.[0]?.toUpperCase() || 'U'}
+            </Avatar>
+            <div>
+              <Text strong>{user.display_name || user.username}</Text>
+              <br />
+              <Text type='tertiary'>{user.email || 'No email set'}</Text>
+            </div>
+          </div>
+          <Descriptions
+            data={[
+              { key: 'Username', value: user.username },
+              { key: 'Role', value: user.role === 100 ? 'Admin' : user.role === 10 ? 'User' : 'Guest' },
+              { key: 'Status', value: user.status === 1 ? 'Active' : 'Disabled' },
+            ]}
+          />
+          <div className='mt-4'>
+            <Link to='/console/personal' className='text-blue-500 hover:underline'>
+              Edit Profile
+            </Link>
+          </div>
+        </Card>
+
+        {/* Security Card */}
+        <Card title='Security' className='h-fit'>
+          <div className='space-y-3'>
+            <div className='flex items-center gap-2'>
+              <IconKey />
+              <Text>Passkey: {user.passkey_enabled ? 'Enabled' : 'Not set'}</Text>
+            </div>
+            <div className='flex items-center gap-2'>
+              <IconShield />
+              <Text>2FA: {user.twofa_enabled ? 'Enabled' : 'Not set'}</Text>
+            </div>
+          </div>
+          <div className='mt-4'>
+            <Link to='/console/personal' className='text-blue-500 hover:underline'>
+              Security Settings
+            </Link>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;

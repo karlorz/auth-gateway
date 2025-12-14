@@ -6,14 +6,14 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/constant"
-	"github.com/karlchow/auth-gateway/middleware"
-	"github.com/karlchow/auth-gateway/model"
-	"github.com/karlchow/auth-gateway/setting"
-	"github.com/karlchow/auth-gateway/setting/console_setting"
-	"github.com/karlchow/auth-gateway/setting/operation_setting"
-	"github.com/karlchow/auth-gateway/setting/system_setting"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/constant"
+	"github.com/karlorz/auth-gateway/middleware"
+	"github.com/karlorz/auth-gateway/model"
+	"github.com/karlorz/auth-gateway/setting"
+	"github.com/karlorz/auth-gateway/setting/console_setting"
+	"github.com/karlorz/auth-gateway/setting/operation_setting"
+	"github.com/karlorz/auth-gateway/setting/system_setting"
 
 	"github.com/gin-gonic/gin"
 )

@@ -6,7 +6,7 @@ import (
 	"math"
 	"sync"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 )
 
 var ModelRequestRateLimitEnabled = false

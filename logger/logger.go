@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/setting/operation_setting"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/setting/operation_setting"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"github.com/gin-gonic/gin"

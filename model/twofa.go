@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 
 	"gorm.io/gorm"
 )

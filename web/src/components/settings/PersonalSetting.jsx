@@ -38,7 +38,6 @@ import { useTranslation } from 'react-i18next';
 // 导入子组件
 import UserInfoHeader from './personal/components/UserInfoHeader';
 import AccountManagement from './personal/cards/AccountManagement';
-import NotificationSettings from './personal/cards/NotificationSettings';
 import EmailBindModal from './personal/modals/EmailBindModal';
 import WeChatBindModal from './personal/modals/WeChatBindModal';
 import AccountDeleteModal from './personal/modals/AccountDeleteModal';
@@ -447,9 +446,8 @@ const PersonalSetting = () => {
           {/* 顶部用户信息区域 */}
           <UserInfoHeader t={t} userState={userState} />
 
-          {/* 账户管理和其他设置 */}
-          <div className='grid grid-cols-1 xl:grid-cols-2 items-start gap-4 md:gap-6 mt-4 md:mt-6'>
-            {/* 左侧：账户管理设置 */}
+          {/* 账户管理设置 */}
+          <div className='mt-4 md:mt-6'>
             <AccountManagement
               t={t}
               userState={userState}
@@ -467,14 +465,6 @@ const PersonalSetting = () => {
               passkeyDeleteLoading={passkeyDeleteLoading}
               onPasskeyRegister={handleRegisterPasskey}
               onPasskeyDelete={handleRemovePasskey}
-            />
-
-            {/* 右侧：其他设置 */}
-            <NotificationSettings
-              t={t}
-              notificationSettings={notificationSettings}
-              handleNotificationSettingChange={handleNotificationSettingChange}
-              saveNotificationSettings={saveNotificationSettings}
             />
           </div>
         </div>

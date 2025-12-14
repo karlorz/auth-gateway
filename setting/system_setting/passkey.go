@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/setting/config"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/setting/config"
 )
 
 type PasskeySettings struct {

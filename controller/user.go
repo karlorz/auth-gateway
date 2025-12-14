@@ -9,14 +9,14 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/dto"
-	"github.com/karlchow/auth-gateway/logger"
-	"github.com/karlchow/auth-gateway/model"
-	"github.com/karlchow/auth-gateway/service"
-	"github.com/karlchow/auth-gateway/setting"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/dto"
+	"github.com/karlorz/auth-gateway/logger"
+	"github.com/karlorz/auth-gateway/model"
+	"github.com/karlorz/auth-gateway/service"
+	"github.com/karlorz/auth-gateway/setting"
 
-	"github.com/karlchow/auth-gateway/constant"
+	"github.com/karlorz/auth-gateway/constant"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

@@ -10,7 +10,7 @@
   <a href="https://raw.githubusercontent.com/karlchow/auth-gateway/main/LICENSE">
     <img src="https://img.shields.io/github/license/karlchow/auth-gateway?color=brightgreen" alt="license">
   </a>
-  <a href="https://github.com/karlchow/auth-gateway/releases/latest">
+  <a href="https://github.com/karlorz/auth-gateway/releases/latest">
     <img src="https://img.shields.io/github/v/release/karlchow/auth-gateway?color=brightgreen&include_prereleases" alt="release">
   </a>
   <a href="https://hub.docker.com/r/karlchow/auth-gateway">
@@ -82,7 +82,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/karlchow/auth-gateway.git
+git clone https://github.com/karlorz/auth-gateway.git
 cd auth-gateway
 
 # Edit configuration

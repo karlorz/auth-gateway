@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 )

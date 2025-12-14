@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/model"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/model"
 
 	"github.com/gin-gonic/gin"
 )

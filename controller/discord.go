@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/model"
-	"github.com/karlchow/auth-gateway/setting/system_setting"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/model"
+	"github.com/karlorz/auth-gateway/setting/system_setting"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

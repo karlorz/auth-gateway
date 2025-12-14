@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/model"
-	passkeysvc "github.com/karlchow/auth-gateway/service/passkey"
-	"github.com/karlchow/auth-gateway/setting/system_setting"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/model"
+	passkeysvc "github.com/karlorz/auth-gateway/service/passkey"
+	"github.com/karlorz/auth-gateway/setting/system_setting"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

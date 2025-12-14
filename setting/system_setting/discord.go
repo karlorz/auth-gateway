@@ -1,6 +1,6 @@
 package system_setting
 
-import "github.com/karlchow/auth-gateway/setting/config"
+import "github.com/karlorz/auth-gateway/setting/config"
 
 type DiscordSettings struct {
 	Enabled               bool   `json:"enabled"`

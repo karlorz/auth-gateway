@@ -1,6 +1,6 @@
 package operation_setting
 
-import "github.com/karlchow/auth-gateway/setting/config"
+import "github.com/karlorz/auth-gateway/setting/config"
 
 // 额度展示类型
 const (
