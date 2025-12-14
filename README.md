@@ -29,9 +29,6 @@
 
 ## 📝 Project Description
 
-> [!NOTE]
-> This project is forked from [New API](https://github.com/QuantumNous/new-api) and focuses on the authentication system as a reusable, production-ready package.
-
 **Auth Gateway** provides a comprehensive authentication solution that can be easily integrated into any fullstack application:
 
 - **Multiple Authentication Methods** - Password, OAuth, Passkey/WebAuthn, 2FA
@@ -245,14 +242,12 @@ Contributions are welcome!
 
 ## 📄 License
 
-AGPL-3.0 - See [LICENSE](LICENSE) for details.
+MIT - See [LICENSE](LICENSE) for details.
 
 ---
 
 ## 🙏 Credits
 
-- Forked from [New API](https://github.com/QuantumNous/new-api) by QuantumNous
-- Built on [One API](https://github.com/songquanpeng/one-api) by songquanpeng
 - WebAuthn support via [go-webauthn](https://github.com/go-webauthn/webauthn)
 - TOTP support via [pquerna/otp](https://github.com/pquerna/otp)
 

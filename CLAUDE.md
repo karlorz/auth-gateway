@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Auth Gateway is a production-ready, multi-provider authentication system forked from New API. It provides a comprehensive authentication solution that can be easily integrated into any fullstack application.
+Auth Gateway is a production-ready, multi-provider authentication system. It provides a comprehensive authentication solution that can be easily integrated into any fullstack application.
 
 **Tech Stack:**
 - Backend: Go 1.25+ with Gin web framework
@@ -321,7 +321,6 @@ Key files:
 ## Documentation
 
 - **Full Auth System Guide**: [docs/AUTH.md](docs/AUTH.md) - Comprehensive documentation covering architecture, all auth methods, database schema, and package extraction guide
-- **Original New API Docs**: https://docs.newapi.pro/
 
 ## Important Notes
 

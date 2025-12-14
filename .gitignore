@@ -11,6 +11,7 @@ web/dist
 .env
 one-api
 new-api
+auth-gateway
 /__debug_bin*
 .DS_Store
 tiktoken_cache

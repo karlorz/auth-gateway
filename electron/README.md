@@ -1,6 +1,6 @@
-# New API Electron Desktop App
+# Auth Gateway Electron Desktop App
 
-This directory contains the Electron wrapper for New API, providing a native desktop application with system tray support for Windows, macOS, and Linux.
+This directory contains the Electron wrapper for Auth Gateway, providing a native desktop application with system tray support for Windows, macOS, and Linux.
 
 ## Prerequisites
 
@@ -9,14 +9,17 @@ The Electron app requires the compiled Go binary to function. You have two optio
 
 **Option A: Use existing binary (without Go installed)**
 ```bash
-# If you have a pre-built binary (e.g., new-api-macos)
-cp ../new-api-macos ../new-api
+# If you have a pre-built binary (e.g., auth-gateway-macos)
+cp ../auth-gateway-macos ../auth-gateway
 ```
 
 **Option B: Build from source (requires Go)**
-TODO
+```bash
+cd ..
+go build -o auth-gateway main.go
+```
 
-### 3. Electron Dependencies
+### 2. Electron Dependencies
 ```bash
 cd electron
 npm install
@@ -33,14 +36,14 @@ This will:
 - Start the Go backend on port 3000
 - Open an Electron window with DevTools enabled
 - Create a system tray icon (menu bar on macOS)
-- Store database in `../data/new-api.db`
+- Store database in `../data/auth-gateway.db`
 
 ## Building for Production
 
 ### Quick Build
 ```bash
 # Ensure Go binary exists in parent directory
-ls ../new-api  # Should exist
+ls ../auth-gateway  # Should exist
 
 # Build for current platform
 npm run build
@@ -66,8 +69,8 @@ const PORT = 3000; // Change to desired port
 ```
 
 ### Database Location
-- **Development**: `../data/new-api.db` (project directory)
+- **Development**: `../data/auth-gateway.db` (project directory)
 - **Production**:
-  - macOS: `~/Library/Application Support/New API/data/`
-  - Windows: `%APPDATA%/New API/data/`
-  - Linux: `~/.config/New API/data/`
+  - macOS: `~/Library/Application Support/Auth Gateway/data/`
+  - Windows: `%APPDATA%/Auth Gateway/data/`
+  - Linux: `~/.config/Auth Gateway/data/`
