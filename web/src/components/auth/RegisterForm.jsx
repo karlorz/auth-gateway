@@ -20,9 +20,9 @@ import {
   Form,
   Icon,
   Modal,
-} from '@douyinfe/semi-ui';
-import Title from '@douyinfe/semi-ui/lib/es/typography/title';
-import Text from '@douyinfe/semi-ui/lib/es/typography/text';
+} from '@douyinfe/semi-ui-19';
+import Title from '@douyinfe/semi-ui-19/lib/es/typography/title';
+import Text from '@douyinfe/semi-ui-19/lib/es/typography/text';
 import {
   IconGithubLogo,
   IconMail,

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Layout, TabPane, Tabs } from '@douyinfe/semi-ui';
+import { Layout, TabPane, Tabs } from '@douyinfe/semi-ui-19';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {

@@ -9,7 +9,7 @@ import {
   TabPane,
   Space,
   Spin,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 
 /**
  * 通用安全验证模态框组件

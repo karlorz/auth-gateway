@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Button, Col, Form, Row, Spin } from '@douyinfe/semi-ui';
+import { Button, Col, Form, Row, Spin } from '@douyinfe/semi-ui-19';
 import {
   compareObjects,
   API,
@@ -9,7 +9,7 @@ import {
   verifyJSON,
 } from '../../../helpers';
 import { useTranslation } from 'react-i18next';
-import Text from '@douyinfe/semi-ui/lib/es/typography/text';
+import Text from '@douyinfe/semi-ui-19/lib/es/typography/text';
 
 const CLAUDE_HEADER = {
   'claude-3-7-sonnet-20250219-thinking': {

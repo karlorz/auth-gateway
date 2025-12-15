@@ -46,7 +46,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-core': ['react', 'react-dom', 'react-router-dom'],
-          'semi-ui': ['@douyinfe/semi-icons', '@douyinfe/semi-ui'],
+          'semi-ui': ['@douyinfe/semi-icons', '@douyinfe/semi-ui-19'],
           tools: ['axios', 'history', 'marked'],
           'react-components': [
             'react-dropzone',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Badge } from '@douyinfe/semi-ui';
+import { Button, Badge } from '@douyinfe/semi-ui-19';
 import { Bell } from 'lucide-react';
 
 const NotificationButton = ({ unreadCount, onNoticeOpen, t }) => {

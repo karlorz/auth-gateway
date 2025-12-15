@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@douyinfe/semi-ui';
+import { Button } from '@douyinfe/semi-ui-19';
 
 const UsersActions = ({ setShowAddUser, t }) => {
   // Add new user

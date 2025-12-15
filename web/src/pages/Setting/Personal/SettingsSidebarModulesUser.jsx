@@ -8,7 +8,7 @@ import {
   Row,
   Col,
   Avatar,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import { API, showSuccess, showError } from '../../../helpers';
 import { StatusContext } from '../../../context/Status';
 import { UserContext } from '../../../context/User';
@@ -384,7 +384,7 @@ export default function SettingsSidebarModulesUser() {
                     sidebarModulesUser[section.key]?.enabled ? '' : 'opacity-50'
                   }`}
                   bodyStyle={{ padding: '16px' }}
-                  hoverable
+                  shadows="hover"
                 >
                   <div className='flex justify-between items-center h-full'>
                     <div className='flex-1 text-left'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Modal, Typography } from '@douyinfe/semi-ui';
+import { Input, Modal, Typography } from '@douyinfe/semi-ui-19';
 import { IconLock } from '@douyinfe/semi-icons';
 import Turnstile from 'react-turnstile';
 

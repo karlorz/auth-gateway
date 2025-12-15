@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Button, Form, Row, Col, Typography, Spin } from '@douyinfe/semi-ui';
+import { Button, Form, Row, Col, Typography, Spin } from '@douyinfe/semi-ui-19';
 const { Text } = Typography;
 import {
   API,

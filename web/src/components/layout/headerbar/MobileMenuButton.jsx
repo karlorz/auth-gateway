@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@douyinfe/semi-ui';
+import { Button } from '@douyinfe/semi-ui-19';
 import { IconClose, IconMenu } from '@douyinfe/semi-icons';
 
 const MobileMenuButton = ({

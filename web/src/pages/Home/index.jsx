@@ -5,7 +5,7 @@ import {
   Input,
   ScrollList,
   ScrollItem,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import { API, showError, copy, showSuccess } from '../../helpers';
 import { useIsMobile } from '../../hooks/common/useIsMobile';
 import { API_ENDPOINTS } from '../../constants/common.constant';

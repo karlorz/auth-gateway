@@ -6,7 +6,7 @@ import {
   Tabs,
   TabPane,
   Timeline,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import { useTranslation } from 'react-i18next';
 import { API, showError, getRelativeTime } from '../../helpers';
 import { marked } from 'marked';

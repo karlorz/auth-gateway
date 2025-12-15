@@ -15,7 +15,7 @@ import {
 } from '../../constants';
 import { useIsMobile } from '../common/useIsMobile';
 import { useTableCompactMode } from '../common/useTableCompactMode';
-import { Modal } from '@douyinfe/semi-ui';
+import { Modal } from '@douyinfe/semi-ui-19';
 
 export const useChannelsData = () => {
   const { t } = useTranslation();

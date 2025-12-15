@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@douyinfe/semi-ui';
+import { Button } from '@douyinfe/semi-ui-19';
 import PropTypes from 'prop-types';
 import { useIsMobile } from '../../../hooks/common/useIsMobile';
 

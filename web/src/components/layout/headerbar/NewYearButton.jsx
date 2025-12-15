@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Dropdown } from '@douyinfe/semi-ui';
+import { Button, Dropdown } from '@douyinfe/semi-ui-19';
 import fireworks from 'react-fireworks';
 
 const NewYearButton = ({ isNewYear }) => {

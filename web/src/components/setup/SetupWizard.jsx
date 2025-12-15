@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Card, Divider, Steps, Form } from '@douyinfe/semi-ui';
+import { Card, Divider, Steps, Form } from '@douyinfe/semi-ui-19';
 import { API, showError, showNotice } from '../../helpers';
 import { useTranslation } from 'react-i18next';
 

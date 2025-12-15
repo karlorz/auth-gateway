@@ -1,5 +1,5 @@
 import React from 'react';
-import { Progress, Divider, Empty } from '@douyinfe/semi-ui';
+import { Progress, Divider, Empty } from '@douyinfe/semi-ui-19';
 import {
   IllustrationConstruction,
   IllustrationConstructionDark,

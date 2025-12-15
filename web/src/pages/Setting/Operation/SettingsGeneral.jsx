@@ -10,7 +10,7 @@ import {
   Select,
   InputGroup,
   Input,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import {
   compareObjects,
   API,

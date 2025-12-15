@@ -8,7 +8,7 @@ import {
   Popover,
   Typography,
   Dropdown,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import { IconMore } from '@douyinfe/semi-icons';
 import { renderGroup, renderNumber, renderQuota } from '../../../helpers';
 
