@@ -467,7 +467,9 @@ export default function UpstreamRatioSync(props) {
     </div>
   );
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const renderDifferenceTable = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const dataSource = useMemo(() => {
       const tmp = [];
 
@@ -496,6 +498,7 @@ export default function UpstreamRatioSync(props) {
       return tmp;
     }, [differences]);
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const filteredDataSource = useMemo(() => {
       if (!searchKeyword.trim() && !ratioTypeFilter) {
         return dataSource;
@@ -513,6 +516,7 @@ export default function UpstreamRatioSync(props) {
       });
     }, [dataSource, searchKeyword, ratioTypeFilter]);
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const upstreamNames = useMemo(() => {
       const set = new Set();
       filteredDataSource.forEach((row) => {

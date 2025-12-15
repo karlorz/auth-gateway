@@ -122,6 +122,7 @@ export function PreCode(props) {
       });
       setTimeout(renderArtifacts, 1);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -316,7 +317,7 @@ function tryWrapHtmlCode(text) {
     );
 }
 
-function _MarkdownContent(props) {
+function MarkdownContentInner(props) {
   const {
     content,
     className,
@@ -570,7 +571,7 @@ function _MarkdownContent(props) {
   );
 }
 
-export const MarkdownContent = React.memo(_MarkdownContent);
+export const MarkdownContent = React.memo(MarkdownContentInner);
 
 export function MarkdownRenderer(props) {
   const {
