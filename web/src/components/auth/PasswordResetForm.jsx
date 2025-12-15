@@ -8,7 +8,7 @@ import {
   getSystemName,
 } from '../../helpers';
 import Turnstile from 'react-turnstile';
-import { Button, Card, Form, Typography } from '@douyinfe/semi-ui';
+import { Button, Card, Form, Typography } from '@douyinfe/semi-ui-19';
 import { IconMail } from '@douyinfe/semi-icons';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';

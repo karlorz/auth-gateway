@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Spin, Tabs } from '@douyinfe/semi-ui';
+import { Card, Spin, Tabs } from '@douyinfe/semi-ui-19';
 import { useTranslation } from 'react-i18next';
 
 import GroupRatioSettings from '../../pages/Setting/Ratio/GroupRatioSettings';

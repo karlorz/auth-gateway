@@ -6,7 +6,7 @@ import {
   Divider,
   Typography,
   Badge,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import {
   isRoot,
   isAdmin,

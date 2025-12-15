@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { API, showError } from '../../helpers';
 import { marked } from 'marked';
-import { Empty } from '@douyinfe/semi-ui';
+import { Empty } from '@douyinfe/semi-ui-19';
 import {
   IllustrationConstruction,
   IllustrationConstructionDark,

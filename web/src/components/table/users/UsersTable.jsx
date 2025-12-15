@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Empty } from '@douyinfe/semi-ui';
+import { Empty } from '@douyinfe/semi-ui-19';
 import CardTable from '../../common/ui/CardTable';
 import {
   IllustrationNoResult,

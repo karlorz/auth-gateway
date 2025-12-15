@@ -23,7 +23,7 @@ import {
   Col,
   Input,
   InputNumber,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import {
   IconUser,
   IconSave,

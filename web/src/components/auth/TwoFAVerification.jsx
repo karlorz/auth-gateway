@@ -6,7 +6,7 @@ import {
   Form,
   Input,
   Typography,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import React, { useState } from 'react';
 
 const { Title, Text, Paragraph } = Typography;

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Avatar, Button, Dropdown, Typography } from '@douyinfe/semi-ui';
+import { Avatar, Button, Dropdown, Typography } from '@douyinfe/semi-ui-19';
 import { ChevronDown } from 'lucide-react';
 import { IconExit, IconUserSetting } from '@douyinfe/semi-icons';
 import { stringToColor } from '../../../helpers';

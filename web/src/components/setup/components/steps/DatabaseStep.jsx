@@ -1,5 +1,5 @@
 import React from 'react';
-import { Banner } from '@douyinfe/semi-ui';
+import { Banner } from '@douyinfe/semi-ui-19';
 
 /**
  * 数据库检查步骤组件

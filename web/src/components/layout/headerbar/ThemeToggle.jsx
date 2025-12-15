@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Button, Dropdown } from '@douyinfe/semi-ui';
+import { Button, Dropdown } from '@douyinfe/semi-ui-19';
 import { Sun, Moon, Monitor } from 'lucide-react';
 import { useActualTheme } from '../../../context/Theme';
 

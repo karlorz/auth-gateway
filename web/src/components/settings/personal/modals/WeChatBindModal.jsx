@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Input, Modal, Image } from '@douyinfe/semi-ui';
+import { Button, Input, Modal, Image } from '@douyinfe/semi-ui-19';
 import { IconKey } from '@douyinfe/semi-icons';
 import { SiWechat } from 'react-icons/si';
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { API, showError } from '../../../helpers';
-import { Empty, Card, Spin, Typography } from '@douyinfe/semi-ui';
+import { Empty, Card, Spin, Typography } from '@douyinfe/semi-ui-19';
 const { Title } = Typography;
 import {
   IllustrationConstruction,

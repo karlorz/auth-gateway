@@ -13,7 +13,7 @@ import {
   Form,
   Row,
   Col,
-} from '@douyinfe/semi-ui';
+} from '@douyinfe/semi-ui-19';
 import { IconSave, IconClose, IconUserAdd } from '@douyinfe/semi-icons';
 import { useTranslation } from 'react-i18next';
 

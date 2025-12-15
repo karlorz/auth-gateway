@@ -1,5 +1,5 @@
 import i18next from 'i18next';
-import { Modal, Tag, Typography, Avatar } from '@douyinfe/semi-ui';
+import { Modal, Tag, Typography, Avatar } from '@douyinfe/semi-ui-19';
 import { copy, showSuccess } from './utils';
 import { MOBILE_BREAKPOINT } from '../hooks/common/useIsMobile';
 import { visit } from 'unist-util-visit';

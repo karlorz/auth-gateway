@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import '@douyinfe/semi-ui/dist/css/semi.css';
+import '@douyinfe/semi-ui-19/dist/css/semi.css';
 import { UserProvider } from './context/User';
 import 'react-toastify/dist/ReactToastify.css';
 import { StatusProvider } from './context/Status';
@@ -9,10 +9,10 @@ import { ThemeProvider } from './context/Theme';
 import PageLayout from './components/layout/PageLayout';
 import './i18n/i18n';
 import './index.css';
-import { LocaleProvider } from '@douyinfe/semi-ui';
+import { LocaleProvider } from '@douyinfe/semi-ui-19';
 import { useTranslation } from 'react-i18next';
-import zh_CN from '@douyinfe/semi-ui/lib/es/locale/source/zh_CN';
-import en_GB from '@douyinfe/semi-ui/lib/es/locale/source/en_GB';
+import zh_CN from '@douyinfe/semi-ui-19/lib/es/locale/source/zh_CN';
+import en_GB from '@douyinfe/semi-ui-19/lib/es/locale/source/en_GB';
 
 // Welcome message
 if (typeof window !== 'undefined') {
