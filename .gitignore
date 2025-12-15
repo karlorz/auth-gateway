@@ -18,7 +18,7 @@ tiktoken_cache
 .eslintcache
 .gocache
 .cache
-web/bun.lock
+# web/bun.lock  # Keep bun.lock for reproducible builds
 
 electron/node_modules
 electron/dist

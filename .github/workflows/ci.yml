@@ -11,12 +11,54 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  frontend:
+    name: Frontend (React)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./web
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Lint (Prettier)
+        run: bun run lint || echo "::warning::Prettier found formatting issues"
+        continue-on-error: true
+
+      - name: Build
+        env:
+          CI: ""
+          VITE_REACT_APP_VERSION: "ci-test"
+        run: bun run build
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
+          retention-days: 1
+
   backend:
     name: Backend (Go)
+    needs: frontend
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Download frontend dist
+        uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -42,34 +84,6 @@ jobs:
           name: coverage-report
           path: coverage.out
           retention-days: 7
-
-  frontend:
-    name: Frontend (React)
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./web
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Lint (Prettier)
-        run: bun run lint || echo "::warning::Prettier found formatting issues"
-        continue-on-error: true
-
-      - name: Build
-        env:
-          CI: ""
-          VITE_REACT_APP_VERSION: "ci-test"
-        run: bun run build
 
   docker:
     name: Docker Build
