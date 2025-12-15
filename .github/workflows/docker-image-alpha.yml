@@ -66,7 +66,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            karlchow/auth-gateway
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway
             ghcr.io/${{ env.GHCR_REPOSITORY }}
 
       - name: Build & push single-arch (to both registries)
@@ -76,8 +76,8 @@ jobs:
           platforms: ${{ matrix.platform }}
           push: true
           tags: |
-            karlchow/auth-gateway:alpha-${{ matrix.arch }}
-            karlchow/auth-gateway:${{ steps.version.outputs.value }}-${{ matrix.arch }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:alpha-${{ matrix.arch }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${{ steps.version.outputs.value }}-${{ matrix.arch }}
             ghcr.io/${{ env.GHCR_REPOSITORY }}:alpha-${{ matrix.arch }}
             ghcr.io/${{ env.GHCR_REPOSITORY }}:${{ steps.version.outputs.value }}-${{ matrix.arch }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -118,16 +118,16 @@ jobs:
       - name: Create & push manifest (Docker Hub - alpha)
         run: |
           docker buildx imagetools create \
-            -t karlchow/auth-gateway:alpha \
-            karlchow/auth-gateway:alpha-amd64 \
-            karlchow/auth-gateway:alpha-arm64
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:alpha \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:alpha-amd64 \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:alpha-arm64
 
       - name: Create & push manifest (Docker Hub - versioned alpha)
         run: |
           docker buildx imagetools create \
-            -t karlchow/auth-gateway:${VERSION} \
-            karlchow/auth-gateway:${VERSION}-amd64 \
-            karlchow/auth-gateway:${VERSION}-arm64
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${VERSION} \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${VERSION}-amd64 \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${VERSION}-arm64
 
       - name: Log in to GHCR
         uses: docker/login-action@v3

@@ -7,13 +7,13 @@
 🔐 **Production-Ready Multi-Provider Authentication System**
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/karlchow/auth-gateway/main/LICENSE">
-    <img src="https://img.shields.io/github/license/karlchow/auth-gateway?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/karlorz/auth-gateway/main/LICENSE">
+    <img src="https://img.shields.io/github/license/karlorz/auth-gateway?color=brightgreen" alt="license">
   </a>
   <a href="https://github.com/karlorz/auth-gateway/releases/latest">
-    <img src="https://img.shields.io/github/v/release/karlchow/auth-gateway?color=brightgreen&include_prereleases" alt="release">
+    <img src="https://img.shields.io/github/v/release/karlorz/auth-gateway?color=brightgreen&include_prereleases" alt="release">
   </a>
-  <a href="https://hub.docker.com/r/karlchow/auth-gateway">
+  <a href="https://hub.docker.com/r/karl8080/auth-gateway">
     <img src="https://img.shields.io/badge/docker-dockerHub-blue" alt="docker">
   </a>
 </p>
@@ -98,7 +98,7 @@ docker run --name auth-gateway -d --restart always \
   -p 3000:3000 \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  karlchow/auth-gateway:latest
+  karl8080/auth-gateway:latest
 
 # MySQL
 docker run --name auth-gateway -d --restart always \
@@ -106,7 +106,7 @@ docker run --name auth-gateway -d --restart always \
   -e SQL_DSN="root:123456@tcp(localhost:3306)/auth_gateway" \
   -e TZ=Asia/Shanghai \
   -v ./data:/data \
-  karlchow/auth-gateway:latest
+  karl8080/auth-gateway:latest
 ```
 
 ### Development

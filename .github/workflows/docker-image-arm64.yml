@@ -63,7 +63,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            karlchow/auth-gateway
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway
 #            ghcr.io/${{ env.GHCR_REPOSITORY }}
 
       - name: Build & push single-arch (to both registries)
@@ -73,8 +73,8 @@ jobs:
           platforms: ${{ matrix.platform }}
           push: true
           tags: |
-            karlchow/auth-gateway:${{ env.TAG }}-${{ matrix.arch }}
-            karlchow/auth-gateway:latest-${{ matrix.arch }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${{ env.TAG }}-${{ matrix.arch }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:latest-${{ matrix.arch }}
 #            ghcr.io/${{ env.GHCR_REPOSITORY }}:${{ env.TAG }}-${{ matrix.arch }}
 #            ghcr.io/${{ env.GHCR_REPOSITORY }}:latest-${{ matrix.arch }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -104,16 +104,16 @@ jobs:
       - name: Create & push manifest (Docker Hub - version)
         run: |
           docker buildx imagetools create \
-            -t karlchow/auth-gateway:${TAG} \
-            karlchow/auth-gateway:${TAG}-amd64 \
-            karlchow/auth-gateway:${TAG}-arm64
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${TAG} \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${TAG}-amd64 \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:${TAG}-arm64
 
       - name: Create & push manifest (Docker Hub - latest)
         run: |
           docker buildx imagetools create \
-            -t karlchow/auth-gateway:latest \
-            karlchow/auth-gateway:latest-amd64 \
-            karlchow/auth-gateway:latest-arm64
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:latest \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:latest-amd64 \
+            ${{ secrets.DOCKERHUB_USERNAME }}/auth-gateway:latest-arm64
 
       # ---- GHCR ----
 #      - name: Log in to GHCR
