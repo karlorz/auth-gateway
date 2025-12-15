@@ -7,16 +7,13 @@ import (
 	"os"
 	"strings"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 
 	"github.com/gin-gonic/gin"
 )
 
 func SetRouter(router *gin.Engine, buildFS embed.FS, indexPage []byte) {
 	SetApiRouter(router)
-	SetDashboardRouter(router)
-	SetRelayRouter(router)
-	SetVideoRouter(router)
 	frontendBaseUrl := os.Getenv("FRONTEND_BASE_URL")
 	if common.IsMasterNode && frontendBaseUrl != "" {
 		frontendBaseUrl = ""

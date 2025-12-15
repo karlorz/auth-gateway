@@ -1,0 +1,18 @@
+# File path: /etc/systemd/system/auth-gateway.service
+# sudo systemctl daemon-reload
+# sudo systemctl start auth-gateway
+# sudo systemctl enable auth-gateway
+# sudo systemctl status auth-gateway
+[Unit]
+Description=Auth Gateway Service
+After=network.target
+
+[Service]
+User=ubuntu  # Note: modify username as needed
+WorkingDirectory=/path/to/auth-gateway  # Note: modify path as needed
+ExecStart=/path/to/auth-gateway/auth-gateway --port 3000 --log-dir /path/to/auth-gateway/logs  # Note: modify path and port as needed
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

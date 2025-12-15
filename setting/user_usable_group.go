@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 )
 
 var userUsableGroups = map[string]string{

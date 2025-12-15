@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"gorm.io/gorm"

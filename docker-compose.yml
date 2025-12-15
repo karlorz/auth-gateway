@@ -1,4 +1,4 @@
-# New-API Docker Compose Configuration
+# Auth Gateway Docker Compose Configuration
 # 
 # Quick Start:
 #   1. docker-compose up -d
@@ -16,7 +16,7 @@ version: '3.4' # For compatibility with older Docker versions
 
 services:
   auth-gateway:
-    image: karlchow/auth-gateway:latest
+    image: karl8080/auth-gateway:latest
     container_name: auth-gateway
     restart: always
     command: --log-dir /app/logs

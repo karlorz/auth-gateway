@@ -1,7 +1,7 @@
 {
-  "name": "new-api-electron",
+  "name": "auth-gateway-electron",
   "version": "1.0.0",
-  "description": "New API - AI Model Gateway Desktop Application",
+  "description": "Auth Gateway - Multi-Provider Authentication Desktop Application",
   "main": "main.js",
   "scripts": {
     "start-app": "electron .",
@@ -12,16 +12,16 @@
     "build:linux": "electron-builder --linux"
   },
   "keywords": [
-    "ai",
-    "api",
-    "gateway",
-    "openai",
-    "claude"
+    "auth",
+    "authentication",
+    "oauth",
+    "passkey",
+    "2fa"
   ],
-  "author": "QuantumNous",
+  "author": "karlorz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/QuantumNous/new-api"
+    "url": "https://github.com/karlorz/auth-gateway"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -29,8 +29,8 @@
     "electron-builder": "^24.9.1"
   },
   "build": {
-    "appId": "com.newapi.desktop",
-    "productName": "New-API-App",
+    "appId": "com.authgateway.desktop",
+    "productName": "Auth-Gateway-App",
     "publish": null,
     "directories": {
       "output": "dist"
@@ -57,8 +57,8 @@
       ],
       "extraResources": [
         {
-          "from": "../new-api",
-          "to": "bin/new-api"
+          "from": "../auth-gateway",
+          "to": "bin/auth-gateway"
         },
         {
           "from": "../web/dist",
@@ -74,8 +74,8 @@
       ],
       "extraResources": [
         {
-          "from": "../new-api.exe",
-          "to": "bin/new-api.exe"
+          "from": "../auth-gateway.exe",
+          "to": "bin/auth-gateway.exe"
         }
       ]
     },
@@ -88,8 +88,8 @@
       "category": "Development",
       "extraResources": [
         {
-          "from": "../new-api",
-          "to": "bin/new-api"
+          "from": "../auth-gateway",
+          "to": "bin/auth-gateway"
         }
       ]
     },

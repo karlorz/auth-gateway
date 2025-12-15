@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/karlchow/auth-gateway/constant"
+	"github.com/karlorz/auth-gateway/constant"
 )
 
 var (
@@ -21,10 +21,9 @@ var (
 )
 
 func printHelp() {
-	fmt.Println("NewAPI(Based OneAPI) " + Version + " - The next-generation LLM gateway and AI asset management system supports multiple languages.")
-	fmt.Println("Original Project: OneAPI by JustSong - https://github.com/songquanpeng/one-api")
-	fmt.Println("Maintainer: QuantumNous - https://github.com/karlchow/auth-gateway")
-	fmt.Println("Usage: newapi [--port <port>] [--log-dir <log directory>] [--version] [--help]")
+	fmt.Println("Auth Gateway " + Version + " - Multi-provider authentication system")
+	fmt.Println("Repository: https://github.com/karlorz/auth-gateway")
+	fmt.Println("Usage: auth-gateway [--port <port>] [--log-dir <log directory>] [--version] [--help]")
 }
 
 func InitEnv() {

@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 	"github.com/gin-gonic/gin"
 )
 

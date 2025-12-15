@@ -3,7 +3,7 @@ package types
 import (
 	"sync"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 )
 
 type RWMap[K comparable, V any] struct {

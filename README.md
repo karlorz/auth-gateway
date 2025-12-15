@@ -10,7 +10,7 @@
   <a href="https://raw.githubusercontent.com/karlchow/auth-gateway/main/LICENSE">
     <img src="https://img.shields.io/github/license/karlchow/auth-gateway?color=brightgreen" alt="license">
   </a>
-  <a href="https://github.com/karlchow/auth-gateway/releases/latest">
+  <a href="https://github.com/karlorz/auth-gateway/releases/latest">
     <img src="https://img.shields.io/github/v/release/karlchow/auth-gateway?color=brightgreen&include_prereleases" alt="release">
   </a>
   <a href="https://hub.docker.com/r/karlchow/auth-gateway">
@@ -28,9 +28,6 @@
 </div>
 
 ## 📝 Project Description
-
-> [!NOTE]
-> This project is forked from [New API](https://github.com/QuantumNous/new-api) and focuses on the authentication system as a reusable, production-ready package.
 
 **Auth Gateway** provides a comprehensive authentication solution that can be easily integrated into any fullstack application:
 
@@ -82,7 +79,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/karlchow/auth-gateway.git
+git clone https://github.com/karlorz/auth-gateway.git
 cd auth-gateway
 
 # Edit configuration
@@ -245,14 +242,12 @@ Contributions are welcome!
 
 ## 📄 License
 
-AGPL-3.0 - See [LICENSE](LICENSE) for details.
+MIT - See [LICENSE](LICENSE) for details.
 
 ---
 
 ## 🙏 Credits
 
-- Forked from [New API](https://github.com/QuantumNous/new-api) by QuantumNous
-- Built on [One API](https://github.com/songquanpeng/one-api) by songquanpeng
 - WebAuthn support via [go-webauthn](https://github.com/go-webauthn/webauthn)
 - TOTP support via [pquerna/otp](https://github.com/pquerna/otp)
 

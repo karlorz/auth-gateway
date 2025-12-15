@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/karlchow/auth-gateway/constant"
+	"github.com/karlorz/auth-gateway/constant"
 
 	"github.com/gin-gonic/gin"
 )

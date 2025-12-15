@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 	"github.com/go-redis/redis/v8"
 )
 

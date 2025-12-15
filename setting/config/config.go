@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 )
 
 // ConfigManager 统一管理所有配置

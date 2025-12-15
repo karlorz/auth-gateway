@@ -11,10 +11,10 @@ on:
         required: true
         type: string
 
-# 配置你的 Gitee 仓库信息
+# Configure your Gitee repository info
 env:
-  GITEE_OWNER: 'QuantumNous'  # 修改为你的 Gitee 用户名
-  GITEE_REPO: 'auth-gateway'                # 修改为你的 Gitee 仓库名
+  GITEE_OWNER: 'karlorz'  # Modify to your Gitee username
+  GITEE_REPO: 'auth-gateway'  # Modify to your Gitee repository name
 
 jobs:
   sync-to-gitee:

@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/dto"
-	"github.com/karlchow/auth-gateway/logger"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/dto"
+	"github.com/karlorz/auth-gateway/logger"
 
 	"github.com/bytedance/gopkg/util/gopool"
 	"gorm.io/gorm"

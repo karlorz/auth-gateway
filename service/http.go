@@ -6,8 +6,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/logger"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/logger"
 
 	"github.com/gin-gonic/gin"
 )

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"runtime/debug"
 
-	"github.com/karlchow/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/common"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,8 +17,8 @@ func RelayPanicRecover() gin.HandlerFunc {
 				common.SysLog(fmt.Sprintf("stacktrace from panic: %s", string(debug.Stack())))
 				c.JSON(http.StatusInternalServerError, gin.H{
 					"error": gin.H{
-						"message": fmt.Sprintf("Panic detected, error: %v. Please submit a issue here: https://github.com/Calcium-Ion/new-api", err),
-						"type":    "new_api_panic",
+						"message": fmt.Sprintf("Panic detected, error: %v. Please submit an issue here: https://github.com/karlorz/auth-gateway", err),
+						"type":    "auth_gateway_panic",
 					},
 				})
 				c.Abort()

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/karlchow/auth-gateway/model"
+	"github.com/karlorz/auth-gateway/model"
 
 	webauthn "github.com/go-webauthn/webauthn/webauthn"
 )

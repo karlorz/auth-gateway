@@ -1,6 +1,6 @@
-# New API Authentication System - Package Extraction Guide
+# Auth Gateway - Authentication System Guide
 
-This document provides comprehensive documentation for extracting the authentication system from New API into a reusable package that can be easily imported into other fullstack applications.
+This document provides comprehensive documentation for the Auth Gateway authentication system, a reusable package that can be easily imported into other fullstack applications.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ This document provides comprehensive documentation for extracting the authentica
 
 ## Overview
 
-The New API authentication system provides a comprehensive, modular authentication solution supporting:
+The Auth Gateway authentication system provides a comprehensive, modular authentication solution supporting:
 
 - **Password Authentication** - Traditional username/email + password login
 - **OAuth 2.0 Providers** - GitHub, Discord, OIDC, WeChat, Telegram, LinuxDO
@@ -488,7 +488,7 @@ import "github.com/pquerna/otp/totp"
 
 func GenerateTOTPSecret(username string) (*otp.Key, error) {
     return totp.Generate(totp.GenerateOpts{
-        Issuer:      "NewAPI",
+        Issuer:      "AuthGateway",
         AccountName: username,
     })
 }
@@ -498,7 +498,7 @@ func ValidateTOTPCode(secret, code string) bool {
 }
 
 func GenerateQRCodeData(secret, username string) string {
-    return fmt.Sprintf("otpauth://totp/NewAPI:%s?secret=%s&issuer=NewAPI", username, secret)
+    return fmt.Sprintf("otpauth://totp/AuthGateway:%s?secret=%s&issuer=AuthGateway", username, secret)
 }
 ```
 
@@ -1029,4 +1029,4 @@ export function useAuth() {
 
 ---
 
-*This documentation is generated from the New API codebase. For the latest updates, refer to the source code and official documentation at https://docs.newapi.pro/*
+*This documentation is for Auth Gateway. For the latest updates, refer to the source code at https://github.com/karlorz/auth-gateway*

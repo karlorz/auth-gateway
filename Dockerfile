@@ -23,7 +23,7 @@ RUN go mod download
 
 COPY . .
 COPY --from=builder /build/dist ./web/dist
-RUN go build -ldflags "-s -w -X 'github.com/QuantumNous/auth-gateway/common.Version=$(cat VERSION)'" -o auth-gateway
+RUN go build -ldflags "-s -w -X 'github.com/karlorz/auth-gateway/common.Version=$(cat VERSION)'" -o auth-gateway
 
 FROM debian:bookworm-slim
 

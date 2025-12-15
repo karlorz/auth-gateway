@@ -3,8 +3,8 @@ package dto
 import (
 	"encoding/json"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/types"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/types"
 )
 
 //type OpenAIError struct {

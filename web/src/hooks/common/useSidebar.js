@@ -1,21 +1,3 @@
-/*
-Copyright (C) 2025 QuantumNous
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
-
-For commercial licensing, please contact support@quantumnous.com
-*/
 
 import { useState, useEffect, useMemo, useContext, useRef } from 'react';
 import { StatusContext } from '../../context/Status';
@@ -38,30 +20,31 @@ export const useSidebar = () => {
   }
 
   // 默认配置
+  // Auth Gateway: trimmed LLM-related modules (chat, token, log, channel, models, redemption, topup)
   const defaultAdminConfig = {
     chat: {
-      enabled: true,
-      playground: true,
-      chat: true,
+      enabled: false,
+      playground: false,
+      chat: false,
     },
     console: {
       enabled: true,
       detail: true,
-      token: true,
-      log: true,
-      midjourney: true,
-      task: true,
+      token: false,
+      log: false,
+      midjourney: false,
+      task: false,
     },
     personal: {
       enabled: true,
-      topup: true,
+      topup: false,
       personal: true,
     },
     admin: {
       enabled: true,
-      channel: true,
-      models: true,
-      redemption: true,
+      channel: false,
+      models: false,
+      redemption: false,
       user: true,
       setting: true,
     },

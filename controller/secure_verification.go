@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/karlchow/auth-gateway/common"
-	"github.com/karlchow/auth-gateway/model"
-	passkeysvc "github.com/karlchow/auth-gateway/service/passkey"
-	"github.com/karlchow/auth-gateway/setting/system_setting"
+	"github.com/karlorz/auth-gateway/common"
+	"github.com/karlorz/auth-gateway/model"
+	passkeysvc "github.com/karlorz/auth-gateway/service/passkey"
+	"github.com/karlorz/auth-gateway/setting/system_setting"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -20,6 +20,26 @@ const (
 	// SecureVerificationTimeout 验证有效期（秒）
 	SecureVerificationTimeout = 300 // 5分钟
 )
+
+// validateTwoFactorAuth validates a 2FA code (TOTP or backup code)
+func validateTwoFactorAuth(twoFA *model.TwoFA, code string) bool {
+	if twoFA == nil || !twoFA.IsEnabled {
+		return false
+	}
+
+	// Try TOTP validation first
+	cleanCode, err := common.ValidateNumericCode(code)
+	if err == nil {
+		valid, _ := twoFA.ValidateTOTPAndUpdateUsage(cleanCode)
+		if valid {
+			return true
+		}
+	}
+
+	// Try backup code validation
+	valid, _ := twoFA.ValidateBackupCodeAndUpdateUsage(code)
+	return valid
+}
 
 type UniversalVerifyRequest struct {
 	Method string `json:"method"` // "2fa" 或 "passkey"
