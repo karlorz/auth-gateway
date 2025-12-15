@@ -20,30 +20,31 @@ export const useSidebar = () => {
   }
 
   // 默认配置
+  // Auth Gateway: trimmed LLM-related modules (chat, token, log, channel, models, redemption, topup)
   const defaultAdminConfig = {
     chat: {
-      enabled: true,
-      playground: true,
-      chat: true,
+      enabled: false,
+      playground: false,
+      chat: false,
     },
     console: {
       enabled: true,
       detail: true,
-      token: true,
-      log: true,
-      midjourney: true,
-      task: true,
+      token: false,
+      log: false,
+      midjourney: false,
+      task: false,
     },
     personal: {
       enabled: true,
-      topup: true,
+      topup: false,
       personal: true,
     },
     admin: {
       enabled: true,
-      channel: true,
-      models: true,
-      redemption: true,
+      channel: false,
+      models: false,
+      redemption: false,
       user: true,
       setting: true,
     },

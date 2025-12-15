@@ -4,10 +4,11 @@ import { useMemo } from 'react';
 export const useNavigation = (t, docsLink, headerNavModules) => {
   const mainNavLinks = useMemo(() => {
     // 默认配置，如果没有传入配置则显示所有模块
+    // Auth Gateway: pricing removed (was LLM model marketplace)
     const defaultModules = {
       home: true,
       console: true,
-      pricing: true,
+      pricing: false,
       docs: true,
       about: true,
     };
