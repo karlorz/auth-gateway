@@ -108,6 +108,13 @@ func SetApiRouter(router *gin.Engine) {
 			}
 		}
 
+		// Group routes (admin only)
+		groupRoute := apiRouter.Group("/group")
+		groupRoute.Use(middleware.AdminAuth())
+		{
+			groupRoute.GET("/", controller.GetAllGroups)
+		}
+
 		// System options (root only)
 		optionRoute := apiRouter.Group("/option")
 		optionRoute.Use(middleware.RootAuth())

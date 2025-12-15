@@ -704,6 +704,13 @@ func GetUserEmail(id int) (email string, err error) {
 	return email, err
 }
 
+// GetAllGroups returns all distinct group names from users table
+func GetAllGroups() ([]string, error) {
+	var groups []string
+	err := DB.Model(&User{}).Distinct(commonGroupCol).Pluck(commonGroupCol, &groups).Error
+	return groups, err
+}
+
 // GetUserGroup gets group from Redis first, falls back to DB if needed
 func GetUserGroup(id int, fromDB bool) (group string, err error) {
 	defer func() {
