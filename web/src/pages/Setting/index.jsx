@@ -4,8 +4,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   Settings,
-  Gauge,
-  Shapes,
   Cog,
   MoreHorizontal,
   LayoutDashboard,
@@ -18,8 +16,6 @@ import SystemSetting from '../../components/settings/SystemSetting';
 import { isRoot } from '../../helpers';
 import OtherSetting from '../../components/settings/OtherSetting';
 import OperationSetting from '../../components/settings/OperationSetting';
-import RateLimitSetting from '../../components/settings/RateLimitSetting';
-import ModelSetting from '../../components/settings/ModelSetting';
 import DashboardSetting from '../../components/settings/DashboardSetting';
 import ChatsSetting from '../../components/settings/ChatsSetting';
 import DrawingSetting from '../../components/settings/DrawingSetting';
@@ -82,26 +78,6 @@ const Setting = () => {
       ),
       content: <PaymentSetting />,
       itemKey: 'payment',
-    });
-    panes.push({
-      tab: (
-        <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-          <Gauge size={18} />
-          {t('速率限制设置')}
-        </span>
-      ),
-      content: <RateLimitSetting />,
-      itemKey: 'ratelimit',
-    });
-    panes.push({
-      tab: (
-        <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-          <Shapes size={18} />
-          {t('模型相关设置')}
-        </span>
-      ),
-      content: <ModelSetting />,
-      itemKey: 'models',
     });
     panes.push({
       tab: (
