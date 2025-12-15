@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NewYearButton from './NewYearButton';
 import NotificationButton from './NotificationButton';

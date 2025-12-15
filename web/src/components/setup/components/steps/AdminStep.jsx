@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Banner, Form } from '@douyinfe/semi-ui';
 import { IconUser, IconLock } from '@douyinfe/semi-icons';

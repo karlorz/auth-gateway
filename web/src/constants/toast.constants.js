@@ -1,4 +1,3 @@
-
 export const toastConstants = {
   SUCCESS_TIMEOUT: 1500,
   INFO_TIMEOUT: 3000,

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useMinimumLoadingTime } from '../../../hooks/common/useMinimumLoadingTime';
 import { useContainerWidth } from '../../../hooks/common/useContainerWidth';

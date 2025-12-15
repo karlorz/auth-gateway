@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { initialState, reducer } from './reducer';
 

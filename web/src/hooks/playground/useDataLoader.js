@@ -1,4 +1,3 @@
-
 import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { API, processModelsData, processGroupsData } from '../../helpers';

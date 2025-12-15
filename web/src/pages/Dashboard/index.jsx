@@ -16,7 +16,9 @@ const Dashboard = () => {
 
   return (
     <div className='mt-[60px] px-4 max-w-4xl mx-auto'>
-      <Title heading={2} className='mb-6'>Dashboard</Title>
+      <Title heading={2} className='mb-6'>
+        Dashboard
+      </Title>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         {/* User Info Card */}
@@ -34,12 +36,26 @@ const Dashboard = () => {
           <Descriptions
             data={[
               { key: 'Username', value: user.username },
-              { key: 'Role', value: user.role === 100 ? 'Admin' : user.role === 10 ? 'User' : 'Guest' },
-              { key: 'Status', value: user.status === 1 ? 'Active' : 'Disabled' },
+              {
+                key: 'Role',
+                value:
+                  user.role === 100
+                    ? 'Admin'
+                    : user.role === 10
+                      ? 'User'
+                      : 'Guest',
+              },
+              {
+                key: 'Status',
+                value: user.status === 1 ? 'Active' : 'Disabled',
+              },
             ]}
           />
           <div className='mt-4'>
-            <Link to='/console/personal' className='text-blue-500 hover:underline'>
+            <Link
+              to='/console/personal'
+              className='text-blue-500 hover:underline'
+            >
               Edit Profile
             </Link>
           </div>
@@ -50,7 +66,9 @@ const Dashboard = () => {
           <div className='space-y-3'>
             <div className='flex items-center gap-2'>
               <IconKey />
-              <Text>Passkey: {user.passkey_enabled ? 'Enabled' : 'Not set'}</Text>
+              <Text>
+                Passkey: {user.passkey_enabled ? 'Enabled' : 'Not set'}
+              </Text>
             </div>
             <div className='flex items-center gap-2'>
               <IconShield />
@@ -58,7 +76,10 @@ const Dashboard = () => {
             </div>
           </div>
           <div className='mt-4'>
-            <Link to='/console/personal' className='text-blue-500 hover:underline'>
+            <Link
+              to='/console/personal'
+              className='text-blue-500 hover:underline'
+            >
               Security Settings
             </Link>
           </div>

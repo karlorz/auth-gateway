@@ -1,4 +1,3 @@
-
 const toBinaryString = (text) => {
   if (typeof TextEncoder !== 'undefined') {
     const bytes = new TextEncoder().encode(text);

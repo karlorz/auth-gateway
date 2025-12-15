@@ -1,4 +1,3 @@
-
 // ========== UI 配置常量 ==========
 export const CHART_CONFIG = { mode: 'desktop-browser' };
 

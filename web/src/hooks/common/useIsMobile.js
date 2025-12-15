@@ -1,4 +1,3 @@
-
 export const MOBILE_BREAKPOINT = 768;
 
 import { useSyncExternalStore } from 'react';

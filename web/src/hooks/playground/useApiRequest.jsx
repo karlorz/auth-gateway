@@ -1,4 +1,3 @@
-
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SSE } from 'sse.js';
@@ -213,7 +212,10 @@ export const useApiRequest = (
         if (data.choices?.[0]) {
           const choice = data.choices[0];
           let content = choice.message?.content || '';
-          let reasoningContent = choice.message?.reasoning_content || choice.message?.reasoning || '';
+          let reasoningContent =
+            choice.message?.reasoning_content ||
+            choice.message?.reasoning ||
+            '';
 
           const processed = processThinkTags(content, reasoningContent);
 
@@ -300,8 +302,8 @@ export const useApiRequest = (
           isStreamComplete = true; // 标记流正常完成
           source.close();
           sseSourceRef.current = null;
-          setDebugData((prev) => ({ 
-            ...prev, 
+          setDebugData((prev) => ({
+            ...prev,
             response: responseData,
             sseMessages: [...(prev.sseMessages || []), '[DONE]'], // 添加 DONE 标记
             isStreaming: false,

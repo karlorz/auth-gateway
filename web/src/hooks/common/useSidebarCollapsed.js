@@ -1,4 +1,3 @@
-
 import { useState, useCallback } from 'react';
 
 const KEY = 'default_collapse_sidebar';

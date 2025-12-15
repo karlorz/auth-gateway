@@ -1,4 +1,3 @@
-
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import {
   Banner,
@@ -360,13 +359,15 @@ const OtherSetting = () => {
               <Form.TextArea
                 label={t('用户协议')}
                 placeholder={t(
-              '在此输入用户协议内容，支持 Markdown & HTML 代码',
+                  '在此输入用户协议内容，支持 Markdown & HTML 代码',
                 )}
                 field={LEGAL_USER_AGREEMENT_KEY}
                 onChange={handleInputChange}
                 style={{ fontFamily: 'JetBrains Mono, Consolas' }}
                 autosize={{ minRows: 6, maxRows: 12 }}
-                helpText={t('填写用户协议内容后，用户注册时将被要求勾选已阅读用户协议')}
+                helpText={t(
+                  '填写用户协议内容后，用户注册时将被要求勾选已阅读用户协议',
+                )}
               />
               <Button
                 onClick={submitUserAgreement}
@@ -383,7 +384,9 @@ const OtherSetting = () => {
                 onChange={handleInputChange}
                 style={{ fontFamily: 'JetBrains Mono, Consolas' }}
                 autosize={{ minRows: 6, maxRows: 12 }}
-                helpText={t('填写隐私政策内容后，用户注册时将被要求勾选已阅读隐私政策')}
+                helpText={t(
+                  '填写隐私政策内容后，用户注册时将被要求勾选已阅读隐私政策',
+                )}
               />
               <Button
                 onClick={submitPrivacyPolicy}

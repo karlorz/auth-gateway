@@ -1,4 +1,3 @@
-
 import { API, showError } from '../helpers';
 import {
   prepareCredentialRequestOptions,

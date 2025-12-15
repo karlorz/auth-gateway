@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { Button, Col, Form, Row, Spin } from '@douyinfe/semi-ui';
 import {
@@ -187,7 +186,10 @@ export default function GroupRatioSettings(props) {
                 },
               ]}
               onChange={(value) =>
-                setInputs({ ...inputs, 'group_ratio_setting.group_special_usable_group': value })
+                setInputs({
+                  ...inputs,
+                  'group_ratio_setting.group_special_usable_group': value,
+                })
               }
             />
           </Col>

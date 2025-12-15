@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CardPro from '../../common/ui/CardPro';
 import UsersTable from './UsersTable';

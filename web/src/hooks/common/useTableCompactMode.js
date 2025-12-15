@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useCallback } from 'react';
 import { getTableCompactMode, setTableCompactMode } from '../../helpers';
 import { TABLE_COMPACT_MODES_KEY } from '../../constants';

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { Button, Form, Row, Col, Typography, Spin } from '@douyinfe/semi-ui';
 const { Text } = Typography;

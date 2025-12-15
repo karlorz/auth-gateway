@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button, Dropdown } from '@douyinfe/semi-ui';
 import { Languages } from 'lucide-react';
-import { CN, GB, FR, RU, JP, VN } from 'country-flag-icons/react/3x2';
 
 const LanguageSelector = ({ currentLang, onLanguageChange, t }) => {
   return (
@@ -10,49 +8,23 @@ const LanguageSelector = ({ currentLang, onLanguageChange, t }) => {
       position='bottomRight'
       render={
         <Dropdown.Menu className='!bg-semi-color-bg-overlay !border-semi-color-border !shadow-lg !rounded-lg dark:!bg-gray-700 dark:!border-gray-600'>
-          {/* Language sorting: Order by English name (Chinese, English, French, Japanese, Russian) */}
           <Dropdown.Item
             onClick={() => onLanguageChange('zh')}
-            className={`!flex !items-center !gap-2 !px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'zh' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
+            className={`!px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'zh' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
           >
-            <CN title='中文' className='!w-5 !h-auto' />
-            <span>中文</span>
+            简体中文
+          </Dropdown.Item>
+          <Dropdown.Item
+            onClick={() => onLanguageChange('zh-HK')}
+            className={`!px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'zh-HK' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
+          >
+            繁體中文
           </Dropdown.Item>
           <Dropdown.Item
             onClick={() => onLanguageChange('en')}
-            className={`!flex !items-center !gap-2 !px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'en' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
+            className={`!px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'en' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
           >
-            <GB title='English' className='!w-5 !h-auto' />
-            <span>English</span>
-          </Dropdown.Item>
-          <Dropdown.Item
-            onClick={() => onLanguageChange('fr')}
-            className={`!flex !items-center !gap-2 !px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'fr' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
-          >
-            <FR title='Français' className='!w-5 !h-auto' />
-            <span>Français</span>
-          </Dropdown.Item>
-          <Dropdown.Item
-            onClick={() => onLanguageChange('ja')}
-            className={`!flex !items-center !gap-2 !px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'ja' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
-          >
-            {/* Japanese flag using emoji as country-flag-icons/react/3x2 does not export JP */}
-            <JP title='日本語' className='!w-5 !h-auto' />
-            <span>日本語</span>
-          </Dropdown.Item>
-          <Dropdown.Item
-            onClick={() => onLanguageChange('ru')}
-            className={`!flex !items-center !gap-2 !px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'ru' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
-          >
-            <RU title='Русский' className='!w-5 !h-auto' />
-            <span>Русский</span>
-          </Dropdown.Item>
-          <Dropdown.Item
-            onClick={() => onLanguageChange('vi')}
-            className={`!flex !items-center !gap-2 !px-3 !py-1.5 !text-sm !text-semi-color-text-0 dark:!text-gray-200 ${currentLang === 'vi' ? '!bg-semi-color-primary-light-default dark:!bg-blue-600 !font-semibold' : 'hover:!bg-semi-color-fill-1 dark:hover:!bg-gray-600'}`}
-          >
-            <VN title='Tiếng Việt' className='!w-5 !h-auto' />
-            <span>Tiếng Việt</span>
+            English
           </Dropdown.Item>
         </Dropdown.Menu>
       }

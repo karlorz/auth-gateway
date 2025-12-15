@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Modal } from '@douyinfe/semi-ui';
@@ -344,9 +343,13 @@ export const useLogsData = () => {
                 other.cache_ratio || 1.0,
                 other.cache_creation_ratio || 1.0,
                 other.cache_creation_tokens_5m || 0,
-                other.cache_creation_ratio_5m || other.cache_creation_ratio || 1.0,
+                other.cache_creation_ratio_5m ||
+                  other.cache_creation_ratio ||
+                  1.0,
                 other.cache_creation_tokens_1h || 0,
-                other.cache_creation_ratio_1h || other.cache_creation_ratio || 1.0,
+                other.cache_creation_ratio_1h ||
+                  other.cache_creation_ratio ||
+                  1.0,
               )
             : renderLogContent(
                 other?.model_ratio,
@@ -472,8 +475,8 @@ export const useLogsData = () => {
           localCountMode = t('上游返回');
         }
         expandDataLocal.push({
-            key: t('计费模式'),
-            value: localCountMode,
+          key: t('计费模式'),
+          value: localCountMode,
         });
       }
       expandDatesLocal[logs[i].key] = expandDataLocal;

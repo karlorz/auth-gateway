@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@douyinfe/semi-ui';
 import { IconClose, IconMenu } from '@douyinfe/semi-icons';
