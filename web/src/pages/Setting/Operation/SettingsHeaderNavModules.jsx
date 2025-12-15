@@ -189,7 +189,7 @@ export default function SettingsHeaderNavModules(props) {
                   minHeight: '80px',
                 }}
                 bodyStyle={{ padding: '16px' }}
-                shadows="hover"
+                shadows='hover'
               >
                 <div
                   style={{
