@@ -239,13 +239,18 @@ const OtherSetting = () => {
       // Create a cached version of the response to avoid frequent GitHub API calls
       // const res = await API.get('/api/status/github-latest-release');
 
-      const { tag_name, body } = res;
+      const { tag_name, body, message } = res;
+      // Handle GitHub API error responses
+      if (message || !tag_name) {
+        showError(message || t('检查更新失败，请稍后再试'));
+        return;
+      }
       if (tag_name === statusState?.status?.version) {
-        showSuccess(`已是最新版本：${tag_name}`);
+        showSuccess(`${t('已是最新版本')}：${tag_name}`);
       } else {
         setUpdateData({
           tag_name: tag_name,
-          content: marked.parse(body),
+          content: marked.parse(body || ''),
         });
         setShowUpdateModal(true);
       }
@@ -455,15 +460,7 @@ const OtherSetting = () => {
                 {t('设置关于')}
               </Button>
               {/*  */}
-              <Banner
-                fullMode={false}
-                type='info'
-                description={t(
-                  '移除 One API 的版权标识必须首先获得授权，项目维护需要花费大量精力，如果本项目对你有意义，请主动支持本项目',
-                )}
-                closeIcon={null}
-                style={{ marginTop: 15 }}
-              />
+
               <Form.Input
                 label={t('页脚')}
                 placeholder={t(
