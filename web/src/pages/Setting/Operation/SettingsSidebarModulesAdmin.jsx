@@ -304,7 +304,7 @@ export default function SettingsSidebarModulesAdmin(props) {
                 <Col key={module.key} xs={24} sm={12} md={8} lg={6} xl={6}>
                   <Card
                     bodyStyle={{ padding: '16px' }}
-                    shadows="hover"
+                    shadows='hover'
                     style={{
                       opacity: sidebarModulesAdmin[section.key]?.enabled
                         ? 1

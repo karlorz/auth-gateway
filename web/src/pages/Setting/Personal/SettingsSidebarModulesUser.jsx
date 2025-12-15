@@ -384,7 +384,7 @@ export default function SettingsSidebarModulesUser() {
                     sidebarModulesUser[section.key]?.enabled ? '' : 'opacity-50'
                   }`}
                   bodyStyle={{ padding: '16px' }}
-                  shadows="hover"
+                  shadows='hover'
                 >
                   <div className='flex justify-between items-center h-full'>
                     <div className='flex-1 text-left'>
