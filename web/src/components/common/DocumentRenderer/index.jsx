@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { API, showError } from '../../../helpers';
 import { Empty, Card, Spin, Typography } from '@douyinfe/semi-ui-19';
 const { Title } = Typography;
@@ -58,7 +58,6 @@ const DocumentRenderer = ({ apiEndpoint, title, cacheKey, emptyMessage }) => {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [htmlStyles, setHtmlStyles] = useState('');
-  const [processedHtmlContent, setProcessedHtmlContent] = useState('');
 
   const loadContent = async () => {
     // 先从缓存中获取
@@ -82,7 +81,7 @@ const DocumentRenderer = ({ apiEndpoint, title, cacheKey, emptyMessage }) => {
           setContent('');
         }
       }
-    } catch (error) {
+    } catch {
       if (!cachedContent) {
         showError(emptyMessage);
         setContent('');
@@ -94,17 +93,16 @@ const DocumentRenderer = ({ apiEndpoint, title, cacheKey, emptyMessage }) => {
 
   const processContent = (rawContent) => {
     if (isHtmlContent(rawContent)) {
-      const { content: htmlContent, styles } = sanitizeHtml(rawContent);
-      setProcessedHtmlContent(htmlContent);
+      const { styles } = sanitizeHtml(rawContent);
       setHtmlStyles(styles);
     } else {
-      setProcessedHtmlContent('');
       setHtmlStyles('');
     }
   };
 
   useEffect(() => {
     loadContent();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // 处理HTML样式注入
@@ -130,6 +128,15 @@ const DocumentRenderer = ({ apiEndpoint, title, cacheKey, emptyMessage }) => {
       if (el) el.remove();
     };
   }, [htmlStyles, cacheKey]);
+
+  // Compute HTML content when needed
+  const htmlContent = useMemo(() => {
+    if (isHtmlContent(content)) {
+      const { content: sanitizedContent } = sanitizeHtml(content);
+      return sanitizedContent;
+    }
+    return null;
+  }, [content]);
 
   // 显示加载状态
   if (loading) {
@@ -187,16 +194,7 @@ const DocumentRenderer = ({ apiEndpoint, title, cacheKey, emptyMessage }) => {
   }
 
   // 如果是 HTML 内容，直接渲染
-  if (isHtmlContent(content)) {
-    const { content: htmlContent, styles } = sanitizeHtml(content);
-
-    // 设置样式（如果有的话）
-    useEffect(() => {
-      if (styles && styles !== htmlStyles) {
-        setHtmlStyles(styles);
-      }
-    }, [content, styles, htmlStyles]);
-
+  if (htmlContent) {
     return (
       <div className='min-h-screen bg-gray-50'>
         <div className='max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
