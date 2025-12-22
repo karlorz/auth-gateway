@@ -27,7 +27,7 @@
     "react-dom": "19",
     "react-dropzone": "^14.2.3",
     "react-fireworks": "^1.0.4",
-    "react-i18next": "^13.0.0",
+    "react-i18next": "^16.5.0",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.10.1",
