@@ -4,7 +4,7 @@ module github.com/karlorz/auth-gateway
 go 1.25.1
 
 require (
-	github.com/andybalholm/brotli v1.1.1
+	github.com/andybalholm/brotli v1.2.0
 	github.com/anknown/ahocorasick v0.0.0-20190904063843-d75dbd5169c0
 	github.com/bytedance/gopkg v0.1.3
 	github.com/gin-contrib/cors v1.7.2
