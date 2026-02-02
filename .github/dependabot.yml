@@ -10,6 +10,7 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "deps(go)"
+    open-pull-requests-limit: 0
 
   # JavaScript/Bun dependencies (npm ecosystem supports bun)
   - package-ecosystem: "npm"
@@ -18,6 +19,7 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "deps(js)"
+    open-pull-requests-limit: 0
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
@@ -26,3 +28,4 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "deps(actions)"
+    open-pull-requests-limit: 0
