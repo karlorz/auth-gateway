@@ -1,5 +1,6 @@
 FRONTEND_DIR = ./web
 BACKEND_DIR = .
+NODE_OPTIONS ?= --max-old-space-size=4096
 
 .PHONY: all build-frontend start-backend dev-db dev-db-down dev-db-logs dev dev-stop
 
@@ -46,7 +47,7 @@ dev-db-logs:
 
 build-frontend:
 	@echo "Building frontend..."
-	@cd $(FRONTEND_DIR) && bun install && DISABLE_ESLINT_PLUGIN='true' VITE_REACT_APP_VERSION=$(cat VERSION) bun run build
+	@cd $(FRONTEND_DIR) && bun install && DISABLE_ESLINT_PLUGIN='true' NODE_OPTIONS="$(NODE_OPTIONS)" VITE_REACT_APP_VERSION=$(cat VERSION) bun run build
 
 start-backend:
 	@echo "Starting backend dev server..."
